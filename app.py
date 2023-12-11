@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import nltk
-import os
 from nltk.tokenize import sent_tokenize
 import re
 from nltk.corpus import stopwords
@@ -13,10 +12,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-# Menambahkan folder nltk_data ke dalam path NLTK
-nltk.data.path.append(os.path.join(os.getcwd(), "nltk"))
-nltk.download('punkt', download_dir="nltk")
-nltk.download('stopwords', download_dir="nltk")
+# Inisialisasi NLTK (jalankan sekali)
+nltk.download("punkt")
+nltk.download("stopwords")
 
 # Download data training dari GitHub
 url = 'https://raw.githubusercontent.com/ach-Ilhamf/data_csv/main/data_berita%20(1).csv'
