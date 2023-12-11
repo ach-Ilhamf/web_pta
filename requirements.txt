@@ -1,7 +1,5 @@
 numpy
 pandas
-nltk
-networkx
 matplotlib
 scikit-learn
 seaborn
